@@ -8,9 +8,7 @@
 import ScreenSaver
 
 class myScreenSaverView: ScreenSaverView {
-	
-	let testVar = "meow"
-	
+
 	let wrapperView = NSStackView()
 	let timeView = TimeView()
 	let settings = Settings()
