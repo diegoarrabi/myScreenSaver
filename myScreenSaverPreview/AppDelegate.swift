@@ -13,7 +13,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 	@IBOutlet var window: NSWindow!
 	
 	let displaySize = NSScreen.main?.frame.size
-	let previewSizeRatio = CGFloat(0.4)
+	let previewSizeRatio = CGFloat(0.6)
 	let previewOrigin = CGPoint(x: 0, y: 0)
 	
 	
@@ -44,10 +44,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 		timer.fire()
 		
 		screenSaverView.timeView.resizeFont(for: screenSaverView.bounds.size)
-	}
-	
-	func applicationWillTerminate(_ aNotification: Notification) {
-		print("APPLICATION TERMINATED")
 	}
 }
 

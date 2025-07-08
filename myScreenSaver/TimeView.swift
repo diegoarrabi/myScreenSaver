@@ -12,6 +12,8 @@ class TimeView: NSTextField {
 	let settings = Settings()
 	var counter = 0.0
 	var dateFormat = ""
+	var fontColor: NSColor = .black
+	
 	
 	override init(frame frameRect: NSRect) {
 		super.init(frame: frameRect)
@@ -27,8 +29,8 @@ class TimeView: NSTextField {
 		isBezeled = false
 		isBordered = false
 		isEditable = false
-		font = NSFont(name: settings.fontName, size: 0)
-		textColor = settings.fontColor
+		font = settings.font
+		textColor = fontColor
 	}
 	
 	func update(_ dateFormat: String) {
@@ -54,6 +56,11 @@ class TimeView: NSTextField {
 	
 	func resizeFont(for size: NSSize) {
 		let newFontSize = size.width * 0.18
-		font = NSFont(name: settings.fontName, size: newFontSize)
+		font = settings.font.withSize(newFontSize)
 	}
+	
+	func updateColor(_ color: NSColor?) {
+		textColor = color
+	}
+	
 }

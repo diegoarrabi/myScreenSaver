@@ -7,7 +7,6 @@
 
 import Cocoa
 
-let date = Date()
 @MainActor var ballPosition: CGPoint = .zero
 @MainActor var ballVelocity: CGVector = .zero
 @MainActor var paddlePosition: CGFloat = 0
@@ -34,17 +33,16 @@ let itemColor = NSColor(red: 0.53, green: 0.58, blue: 0.49, alpha: 1.00)
 							y: paddleBottomOffset - (paddleSize.height / 2),
 							width: paddleSize.width,
 							height: paddleSize.height)
-	let paddle = NSBezierPath(rect: paddleRect	)
+	let paddle = NSBezierPath(rect: paddleRect )
 	
 	color.setFill()
 	paddle.fill()
 }
 
 func initialVelocity() -> CGVector {
-	let desiredVelocityMagnitude: CGFloat = inititalMagnitude
 	let xVelocity = CGFloat.random(in: 2.5...4.0)
 	let xSign: CGFloat = Bool.random() ? 1 : -1
-	let yVelocity = sqrt(pow(desiredVelocityMagnitude, 2) - pow(xVelocity, 2))
+	let yVelocity = sqrt(pow(inititalMagnitude, 2) - pow(xVelocity, 2))
 	let ySign: CGFloat = Bool.random() ? 1 : -1
 	return CGVector(dx: xVelocity * xSign, dy: yVelocity * ySign)
 }
@@ -67,3 +65,4 @@ func initialVelocity() -> CGVector {
 	ballPosition.y + ballRadius >= yBounds.lower &&
 	ballPosition.y - ballRadius <= yBounds.upper
 }
+

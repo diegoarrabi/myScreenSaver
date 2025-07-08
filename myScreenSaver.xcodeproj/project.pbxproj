@@ -7,41 +7,63 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		921C50DF2E1CB30300CF3C31 /* 04B_03__.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 921C50D62E1CB30300CF3C31 /* 04B_03__.ttf */; };
+		921C50E02E1CB30300CF3C31 /* JetBrainsMono-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 921C50D72E1CB30300CF3C31 /* JetBrainsMono-Light.otf */; };
+		921C50E12E1CB30300CF3C31 /* JetBrainsMono-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 921C50D82E1CB30300CF3C31 /* JetBrainsMono-Medium.otf */; };
+		921C50E22E1CB30300CF3C31 /* MartianMono.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 921C50D92E1CB30300CF3C31 /* MartianMono.ttf */; };
+		921C50E32E1CB30300CF3C31 /* PixeloidMono.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 921C50DA2E1CB30300CF3C31 /* PixeloidMono.ttf */; };
+		921C50E42E1CB30300CF3C31 /* SF-Mono-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 921C50DB2E1CB30300CF3C31 /* SF-Mono-Regular.otf */; };
+		921C50E52E1CB30300CF3C31 /* VCR-OSD-Mono.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 921C50DC2E1CB30300CF3C31 /* VCR-OSD-Mono.ttf */; };
+		921C50E62E1CB30300CF3C31 /* 04B_03__.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 921C50D62E1CB30300CF3C31 /* 04B_03__.ttf */; };
+		921C50E72E1CB30300CF3C31 /* JetBrainsMono-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 921C50D72E1CB30300CF3C31 /* JetBrainsMono-Light.otf */; };
+		921C50E82E1CB30300CF3C31 /* JetBrainsMono-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 921C50D82E1CB30300CF3C31 /* JetBrainsMono-Medium.otf */; };
+		921C50E92E1CB30300CF3C31 /* MartianMono.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 921C50D92E1CB30300CF3C31 /* MartianMono.ttf */; };
+		921C50EA2E1CB30300CF3C31 /* PixeloidMono.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 921C50DA2E1CB30300CF3C31 /* PixeloidMono.ttf */; };
+		921C50EB2E1CB30300CF3C31 /* SF-Mono-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 921C50DB2E1CB30300CF3C31 /* SF-Mono-Regular.otf */; };
+		921C50EC2E1CB30300CF3C31 /* VCR-OSD-Mono.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 921C50DC2E1CB30300CF3C31 /* VCR-OSD-Mono.ttf */; };
 		9225901A2E1496C1003F49D2 /* ColorSequence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922590132E1496C1003F49D2 /* ColorSequence.swift */; };
 		9225901B2E1496C1003F49D2 /* myScreenSaverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922590152E1496C1003F49D2 /* myScreenSaverView.swift */; };
 		9225901C2E1496C1003F49D2 /* PongSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922590162E1496C1003F49D2 /* PongSettings.swift */; };
 		9225901D2E1496C1003F49D2 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922590172E1496C1003F49D2 /* Settings.swift */; };
 		9225901E2E1496C1003F49D2 /* TimeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922590182E1496C1003F49D2 /* TimeView.swift */; };
-		9225901F2E1496C1003F49D2 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 922590142E1496C1003F49D2 /* Info.plist */; };
-		922590202E1496C1003F49D2 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 922590142E1496C1003F49D2 /* Info.plist */; };
 		922590212E1496C1003F49D2 /* ColorSequence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922590132E1496C1003F49D2 /* ColorSequence.swift */; };
 		922590222E1496C1003F49D2 /* myScreenSaverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922590152E1496C1003F49D2 /* myScreenSaverView.swift */; };
 		922590232E1496C1003F49D2 /* PongSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922590162E1496C1003F49D2 /* PongSettings.swift */; };
 		922590242E1496C1003F49D2 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922590172E1496C1003F49D2 /* Settings.swift */; };
 		922590252E1496C1003F49D2 /* TimeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922590182E1496C1003F49D2 /* TimeView.swift */; };
-		9225902E2E1498E6003F49D2 /* JetBrainsMono-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9225902D2E1498E6003F49D2 /* JetBrainsMono-Medium.otf */; };
-		9225902F2E1498E6003F49D2 /* JetBrainsMono-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9225902C2E1498E6003F49D2 /* JetBrainsMono-Light.otf */; };
-		922590302E1498E6003F49D2 /* JetBrainsMono-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9225902D2E1498E6003F49D2 /* JetBrainsMono-Medium.otf */; };
-		922590312E1498E6003F49D2 /* JetBrainsMono-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9225902C2E1498E6003F49D2 /* JetBrainsMono-Light.otf */; };
 		922590392E149B6B003F49D2 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 922590352E149B6B003F49D2 /* MainMenu.xib */; };
 		9225903A2E149B6B003F49D2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922590322E149B6B003F49D2 /* AppDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		921C50CF2E1CB0B800CF3C31 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		921C50D62E1CB30300CF3C31 /* 04B_03__.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = 04B_03__.ttf; sourceTree = "<group>"; };
+		921C50D72E1CB30300CF3C31 /* JetBrainsMono-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "JetBrainsMono-Light.otf"; sourceTree = "<group>"; };
+		921C50D82E1CB30300CF3C31 /* JetBrainsMono-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "JetBrainsMono-Medium.otf"; sourceTree = "<group>"; };
+		921C50D92E1CB30300CF3C31 /* MartianMono.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = MartianMono.ttf; sourceTree = "<group>"; };
+		921C50DA2E1CB30300CF3C31 /* PixeloidMono.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = PixeloidMono.ttf; sourceTree = "<group>"; };
+		921C50DB2E1CB30300CF3C31 /* SF-Mono-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Mono-Regular.otf"; sourceTree = "<group>"; };
+		921C50DC2E1CB30300CF3C31 /* VCR-OSD-Mono.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "VCR-OSD-Mono.ttf"; sourceTree = "<group>"; };
+		921C50ED2E1CB59E00CF3C31 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		92258F9F2E1486D2003F49D2 /* myScreenSaver.saver */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = myScreenSaver.saver; sourceTree = BUILT_PRODUCTS_DIR; };
 		92258FF82E149024003F49D2 /* myScreenSaverPreview.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = myScreenSaverPreview.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		922590132E1496C1003F49D2 /* ColorSequence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorSequence.swift; sourceTree = "<group>"; };
-		922590142E1496C1003F49D2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		922590152E1496C1003F49D2 /* myScreenSaverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = myScreenSaverView.swift; sourceTree = "<group>"; };
 		922590162E1496C1003F49D2 /* PongSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PongSettings.swift; sourceTree = "<group>"; };
 		922590172E1496C1003F49D2 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		922590182E1496C1003F49D2 /* TimeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeView.swift; sourceTree = "<group>"; };
-		9225902C2E1498E6003F49D2 /* JetBrainsMono-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "JetBrainsMono-Light.otf"; sourceTree = "<group>"; };
-		9225902D2E1498E6003F49D2 /* JetBrainsMono-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "JetBrainsMono-Medium.otf"; sourceTree = "<group>"; };
 		922590322E149B6B003F49D2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		922590342E149B6B003F49D2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		922590362E149B6B003F49D2 /* myScreenSaverPreview.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = myScreenSaverPreview.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		92C4606B2E1A396300AD4BE9 /* Extensions */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		92258F9C2E1486D2003F49D2 /* Frameworks */ = {
@@ -61,6 +83,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		921C50DD2E1CB30300CF3C31 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				921C50D62E1CB30300CF3C31 /* 04B_03__.ttf */,
+				921C50D72E1CB30300CF3C31 /* JetBrainsMono-Light.otf */,
+				921C50D82E1CB30300CF3C31 /* JetBrainsMono-Medium.otf */,
+				921C50D92E1CB30300CF3C31 /* MartianMono.ttf */,
+				921C50DA2E1CB30300CF3C31 /* PixeloidMono.ttf */,
+				921C50DB2E1CB30300CF3C31 /* SF-Mono-Regular.otf */,
+				921C50DC2E1CB30300CF3C31 /* VCR-OSD-Mono.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		921C50DE2E1CB30300CF3C31 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				921C50DD2E1CB30300CF3C31 /* Fonts */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		92258F952E1486D2003F49D2 = {
 			isa = PBXGroup;
 			children = (
@@ -82,37 +126,22 @@
 		922590192E1496C1003F49D2 /* myScreenSaver */ = {
 			isa = PBXGroup;
 			children = (
-				9225902A2E149889003F49D2 /* Assets */,
+				921C50DE2E1CB30300CF3C31 /* Resources */,
+				92C4606B2E1A396300AD4BE9 /* Extensions */,
 				922590152E1496C1003F49D2 /* myScreenSaverView.swift */,
 				922590182E1496C1003F49D2 /* TimeView.swift */,
 				922590162E1496C1003F49D2 /* PongSettings.swift */,
 				922590132E1496C1003F49D2 /* ColorSequence.swift */,
 				922590172E1496C1003F49D2 /* Settings.swift */,
-				922590142E1496C1003F49D2 /* Info.plist */,
+				921C50CF2E1CB0B800CF3C31 /* Info.plist */,
 			);
 			path = myScreenSaver;
-			sourceTree = "<group>";
-		};
-		9225902A2E149889003F49D2 /* Assets */ = {
-			isa = PBXGroup;
-			children = (
-				9225902B2E1498A0003F49D2 /* Fonts */,
-			);
-			path = Assets;
-			sourceTree = "<group>";
-		};
-		9225902B2E1498A0003F49D2 /* Fonts */ = {
-			isa = PBXGroup;
-			children = (
-				9225902C2E1498E6003F49D2 /* JetBrainsMono-Light.otf */,
-				9225902D2E1498E6003F49D2 /* JetBrainsMono-Medium.otf */,
-			);
-			path = Fonts;
 			sourceTree = "<group>";
 		};
 		922590372E149B6B003F49D2 /* myScreenSaverPreview */ = {
 			isa = PBXGroup;
 			children = (
+				921C50ED2E1CB59E00CF3C31 /* Info.plist */,
 				922590322E149B6B003F49D2 /* AppDelegate.swift */,
 				922590352E149B6B003F49D2 /* MainMenu.xib */,
 				922590362E149B6B003F49D2 /* myScreenSaverPreview.entitlements */,
@@ -146,6 +175,9 @@
 			);
 			dependencies = (
 			);
+			fileSystemSynchronizedGroups = (
+				92C4606B2E1A396300AD4BE9 /* Extensions */,
+			);
 			name = myScreenSaver;
 			packageProductDependencies = (
 			);
@@ -164,6 +196,9 @@
 			buildRules = (
 			);
 			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				92C4606B2E1A396300AD4BE9 /* Extensions */,
 			);
 			name = myScreenSaverPreview;
 			packageProductDependencies = (
@@ -216,9 +251,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9225902E2E1498E6003F49D2 /* JetBrainsMono-Medium.otf in Resources */,
-				9225902F2E1498E6003F49D2 /* JetBrainsMono-Light.otf in Resources */,
-				9225901F2E1496C1003F49D2 /* Info.plist in Resources */,
+				921C50E62E1CB30300CF3C31 /* 04B_03__.ttf in Resources */,
+				921C50E72E1CB30300CF3C31 /* JetBrainsMono-Light.otf in Resources */,
+				921C50E82E1CB30300CF3C31 /* JetBrainsMono-Medium.otf in Resources */,
+				921C50E92E1CB30300CF3C31 /* MartianMono.ttf in Resources */,
+				921C50EA2E1CB30300CF3C31 /* PixeloidMono.ttf in Resources */,
+				921C50EB2E1CB30300CF3C31 /* SF-Mono-Regular.otf in Resources */,
+				921C50EC2E1CB30300CF3C31 /* VCR-OSD-Mono.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -226,10 +265,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				922590302E1498E6003F49D2 /* JetBrainsMono-Medium.otf in Resources */,
 				922590392E149B6B003F49D2 /* MainMenu.xib in Resources */,
-				922590312E1498E6003F49D2 /* JetBrainsMono-Light.otf in Resources */,
-				922590202E1496C1003F49D2 /* Info.plist in Resources */,
+				921C50DF2E1CB30300CF3C31 /* 04B_03__.ttf in Resources */,
+				921C50E02E1CB30300CF3C31 /* JetBrainsMono-Light.otf in Resources */,
+				921C50E12E1CB30300CF3C31 /* JetBrainsMono-Medium.otf in Resources */,
+				921C50E22E1CB30300CF3C31 /* MartianMono.ttf in Resources */,
+				921C50E32E1CB30300CF3C31 /* PixeloidMono.ttf in Resources */,
+				921C50E42E1CB30300CF3C31 /* SF-Mono-Regular.otf in Resources */,
+				921C50E52E1CB30300CF3C31 /* VCR-OSD-Mono.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -401,8 +444,9 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = Z2N3W4U8BQ;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = myScreenSaver/Info.plist;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				INFOPLIST_KEY_NSPrincipalClass = myScreenSaver.ScreensaverView;
+				INFOPLIST_KEY_NSPrincipalClass = myScreenSaver.myScreenSaverView;
 				INSTALL_PATH = "$(HOME)/Library/Screen Savers";
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = diegoibarra.myScreenSaver;
@@ -423,8 +467,9 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = Z2N3W4U8BQ;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = myScreenSaver/Info.plist;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				INFOPLIST_KEY_NSPrincipalClass = myScreenSaver.ScreensaverView;
+				INFOPLIST_KEY_NSPrincipalClass = myScreenSaver.myScreenSaverView;
 				INSTALL_PATH = "$(HOME)/Library/Screen Savers";
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = diegoibarra.myScreenSaver;
@@ -447,6 +492,7 @@
 				DEVELOPMENT_TEAM = Z2N3W4U8BQ;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = myScreenSaverPreview/Info.plist;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_NSMainNibFile = MainMenu;
 				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
@@ -477,6 +523,7 @@
 				DEVELOPMENT_TEAM = Z2N3W4U8BQ;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = myScreenSaverPreview/Info.plist;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_NSMainNibFile = MainMenu;
 				INFOPLIST_KEY_NSPrincipalClass = NSApplication;

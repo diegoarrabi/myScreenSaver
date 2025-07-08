@@ -5,15 +5,26 @@
 //  Created by Diego Ibarra on 7/1/25.
 //
 
+import Cocoa
 import ScreenSaver
 
 class myScreenSaverView: ScreenSaverView {
-
-	let wrapperView = NSStackView()
-	let timeView = TimeView()
-	let settings = Settings()
-	let colorSequence = ColorSequence()
 	
+	let wrapperView = NSStackView()
+	let colorSequence = ColorSequence()
+	let settings = Settings()
+	let timeView = TimeView()
+
+
+	override init?(frame: NSRect, isPreview: Bool) {
+		super.init(frame: frame, isPreview: isPreview)
+	}
+	
+	required init?(coder: NSCoder) {
+		super.init(coder: coder)
+	}
+	
+
 	override func viewDidMoveToWindow() {
 		wantsLayer = true
 		animationTimeInterval = settings.animationFPS
@@ -26,7 +37,7 @@ class myScreenSaverView: ScreenSaverView {
 	}
 	
 	func loadFonts() {
-		Settings.loadFont(fontName: settings.fontName, fontExt: settings.fontExt)
+//		Settings.loadFont(fontName: settings.fontName, fontExt: settings.fontExt)
 	}
 	
 	func configureViews() {
@@ -48,8 +59,13 @@ class myScreenSaverView: ScreenSaverView {
 	override func draw(_ rect: NSRect) {
 		settings.bgColor.setFill()
 		bounds.fill()
-		drawBall(colorSequence.getColor())
-		drawPaddle(colorSequence.getColor())
+		let color = colorSequence.getColor()
+		let satColor = color.withSaturation(0.5) ?? color
+		let comColor = satColor.withComplementary()
+		drawBall(satColor)
+		drawPaddle(satColor)
+		timeView.updateColor(comColor)
+		
 	}
 	
 	override func animateOneFrame() {
@@ -68,8 +84,20 @@ class myScreenSaverView: ScreenSaverView {
 		ballPosition.y += ballVelocity.dy
 		paddlePosition = ballPosition.x
 		
+		if ballPosition.x < paddleSize.width / 2 {
+			paddlePosition = paddleSize.width / 2
+		}
+		if ballPosition.x > bounds.width - paddleSize.width / 2 {
+			paddlePosition = bounds.width - paddleSize.width / 2
+		}
+		
 		let flasher = timeView.timeFlash()
 		timeView.update(flasher)
 		setNeedsDisplay(bounds)
+		
+	}
+	
+	class override func performGammaFade() -> Bool {
+		return true
 	}
 }

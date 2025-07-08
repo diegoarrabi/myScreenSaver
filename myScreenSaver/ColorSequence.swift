@@ -79,7 +79,8 @@ class ColorSequence {
 			calibratedRed: CGFloat(components.red),
 			green: CGFloat(components.green),
 			blue: CGFloat(components.blue),
-			alpha: 1)
+			alpha: 0.7)
+		
 		return color
 	}
 }

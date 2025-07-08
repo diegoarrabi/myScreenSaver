@@ -10,16 +10,23 @@ import ScreenSaver
 
 class Settings {
 	let animationFPS: Double = 0.05
-	let fontName: String = "JetBrainsMono-Medium"
+	let font: NSFont = NSFont(name: "JetBrainsMono-Medium", size: 0)!
+//	let fontName: String = "JetBrainsMono-Medium"
+//	let fontName: String = "MartianMono"
+//	let fontName: String = "SF-Mono-Regular"
+//	let fontName: String = "JetBrainsMono-Light"
+//	let fontName: String = "VCR_OSD_Mono"
+//	let fontName: String = "PixeloidMono"
 	let fontExt: String = "otf"
-	let fontColor = NSColor(red: 0.31, green: 0.55, blue: 0.56, alpha: 1.00)
+//	let fontExt: String = "ttf"
+	let fontColor = NSColor(red: 0.56, green: 0.64, blue: 0.68, alpha: 1.00)
 	let dateFormatEven: String = "HH:mm:ss"
 	let dateFormatOdd: String = "HH mm ss"
 	let colorFadeDuration: Double = 0.5
 	let bgColor: NSColor = .black
 	
 	static func loadFont(fontName: String, fontExt: String) {
-		let bundle = Bundle(for: self)
+		let bundle = Bundle(for: Settings.self)
 		guard
 			let url = bundle.url(forResource: fontName, withExtension: fontExt)
 		else {
@@ -27,8 +34,8 @@ class Settings {
 		}
 		var error: Unmanaged<CFError>? = nil
 		CTFontManagerRegisterFontsForURL(url as CFURL, .process, &error)
-		if error != nil {
-			NSLog(String(describing: error))
+		if let error = error?.takeRetainedValue () {
+			NSLog("Font registration error: \(error)")
 		}
 	}
 }
