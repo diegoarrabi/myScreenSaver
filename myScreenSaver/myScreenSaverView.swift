@@ -12,10 +12,12 @@ import os.log
 
 class myScreenSaverView: ScreenSaverView {
 	
+	let settings = ScreenSaverSettings.shared
+
 	let wrapperView = NSStackView()
 	let colorSequence = ColorSequence()
-	let settings = Settings()
 	let timeView = TimeView()
+	let textView = TextView()
 
 
 	override init?(frame: NSRect, isPreview: Bool) {
@@ -44,12 +46,12 @@ class myScreenSaverView: ScreenSaverView {
 		logValues()
 	}
 	
-		
 	func configureViews() {
 		wrapperView.alignment = .centerX
 		wrapperView.orientation = .vertical
 		wrapperView.distribution = .equalCentering
 		wrapperView.addArrangedSubview(timeView)
+//		wrapperView.addArrangedSubview(textView)
 		addSubview(wrapperView)
 	}
 	
@@ -62,25 +64,15 @@ class myScreenSaverView: ScreenSaverView {
 	}
 	
 	override func draw(_ rect: NSRect) {
-		settings.bgColor.setFill()
+		settings.backgroundColor.setFill()
 		bounds.fill()
 		let color = colorSequence.getColor()
-		let satColor = color.withSaturation(0.5) ?? color
-		let comColor = satColor.withComplementary()
-		drawBall(satColor)
-		drawPaddle(satColor)
-		timeView.updateColor(comColor)
+		let desaturatedColor = color.withSaturation(0.5) ?? color
+		let complementaryColor = desaturatedColor.withComplementary()
+		drawBall(desaturatedColor)
+		drawPaddle(desaturatedColor)
+		timeView.updateColor(complementaryColor)
 		
-	}
-	
-	override func stopAnimation() {
-		os_log("############################################")
-		os_log("############################################")
-		os_log("############################################")
-		os_log("View Hid")
-		os_log("############################################")
-		os_log("############################################")
-		os_log("############################################")
 	}
 	
 	override func animateOneFrame() {

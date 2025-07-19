@@ -9,10 +9,8 @@ import Cocoa
 
 class TimeView: NSTextField {
 	
-	let settings = Settings()
+	let settings = ScreenSaverSettings.shared
 	var counter = 0.0
-	var dateFormat = ""
-	var fontColor: NSColor = .black
 	
 	
 	override init(frame frameRect: NSRect) {
@@ -30,7 +28,7 @@ class TimeView: NSTextField {
 		isBordered = false
 		isEditable = false
 		font = settings.font
-		textColor = fontColor
+		textColor = settings.fontColor
 	}
 	
 	func update(_ dateFormat: String) {
@@ -45,13 +43,13 @@ class TimeView: NSTextField {
 		let countTo = round(1/settings.animationFPS)+5
 		counter += 1
 		if counter < countTo/2 {
-			dateFormat = settings.dateFormatEven
+			return settings.dateFormatEven
 		} else if counter < countTo {
-			dateFormat = settings.dateFormatOdd
+			return settings.dateFormatOdd
 		} else if counter == countTo {
 			counter = 0.0
 		}
-		return dateFormat
+		return settings.dateFormatEven
 	}
 	
 	func resizeFont(for size: NSSize) {

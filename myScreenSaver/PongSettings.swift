@@ -14,7 +14,6 @@ let inititalMagnitude: CGFloat = 4
 let ballRadius: CGFloat = 20
 let paddleBottomOffset: CGFloat = 100
 let paddleSize = NSSize(width: 120, height: 20)
-let itemColor = NSColor(red: 0.53, green: 0.58, blue: 0.49, alpha: 1.00)
 
 @MainActor func drawBall(_ color: NSColor) {
 	let ballRect = NSRect(x: ballPosition.x - ballRadius,
