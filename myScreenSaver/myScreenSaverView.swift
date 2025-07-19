@@ -7,6 +7,8 @@
 
 import Cocoa
 import ScreenSaver
+import os.log
+
 
 class myScreenSaverView: ScreenSaverView {
 	
@@ -24,22 +26,25 @@ class myScreenSaverView: ScreenSaverView {
 		super.init(coder: coder)
 	}
 	
-
+	func logValues() {
+		os_log("############################################")
+		os_log("############################################")
+		os_log("############################################")
+		os_log("Ball Velocity: %{public}@", "\(ballVelocity)")
+	}
+	
 	override func viewDidMoveToWindow() {
 		wantsLayer = true
 		animationTimeInterval = settings.animationFPS
-		loadFonts()
 		configureViews()
 		layoutViews()
 		animateOneFrame()
 		ballPosition = CGPoint(x: frame.width / 2, y: frame.height / 2)
 		ballVelocity = initialVelocity()
+		logValues()
 	}
 	
-	func loadFonts() {
-//		Settings.loadFont(fontName: settings.fontName, fontExt: settings.fontExt)
-	}
-	
+		
 	func configureViews() {
 		wrapperView.alignment = .centerX
 		wrapperView.orientation = .vertical
@@ -68,6 +73,16 @@ class myScreenSaverView: ScreenSaverView {
 		
 	}
 	
+	override func stopAnimation() {
+		os_log("############################################")
+		os_log("############################################")
+		os_log("############################################")
+		os_log("View Hid")
+		os_log("############################################")
+		os_log("############################################")
+		os_log("############################################")
+	}
+	
 	override func animateOneFrame() {
 		let oobAxis = ballIsOOB(bounds)
 		if oobAxis.xAxis {
@@ -94,7 +109,6 @@ class myScreenSaverView: ScreenSaverView {
 		let flasher = timeView.timeFlash()
 		timeView.update(flasher)
 		setNeedsDisplay(bounds)
-		
 	}
 	
 	class override func performGammaFade() -> Bool {

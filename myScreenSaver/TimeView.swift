@@ -42,7 +42,7 @@ class TimeView: NSTextField {
 	}
 	
 	func timeFlash () -> String{
-		let countTo = round(1/settings.animationFPS)
+		let countTo = round(1/settings.animationFPS)+5
 		counter += 1
 		if counter < countTo/2 {
 			dateFormat = settings.dateFormatEven

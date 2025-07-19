@@ -10,7 +10,7 @@ import Cocoa
 @MainActor var ballPosition: CGPoint = .zero
 @MainActor var ballVelocity: CGVector = .zero
 @MainActor var paddlePosition: CGFloat = 0
-let inititalMagnitude: CGFloat = 8
+let inititalMagnitude: CGFloat = 4
 let ballRadius: CGFloat = 20
 let paddleBottomOffset: CGFloat = 100
 let paddleSize = NSSize(width: 120, height: 20)
@@ -40,7 +40,7 @@ let itemColor = NSColor(red: 0.53, green: 0.58, blue: 0.49, alpha: 1.00)
 }
 
 func initialVelocity() -> CGVector {
-	let xVelocity = CGFloat.random(in: 2.5...4.0)
+	let xVelocity = CGFloat.random(in: 2.5...3.0)
 	let xSign: CGFloat = Bool.random() ? 1 : -1
 	let yVelocity = sqrt(pow(inititalMagnitude, 2) - pow(xVelocity, 2))
 	let ySign: CGFloat = Bool.random() ? 1 : -1
