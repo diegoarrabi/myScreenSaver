@@ -7,43 +7,28 @@
 
 import Cocoa
 import ScreenSaver
-import os.log
 
 
 class myScreenSaverView: ScreenSaverView {
 	
+	// MARK: - GLOBALS
 	let settings = ScreenSaverSettings.shared
-
 	let wrapperView = NSStackView()
 	let colorSequence = ColorSequence()
 	let timeView = TimeView()
 	let textView = TextView()
+	var ballPosition: CGPoint = CGPoint()
+	var ballVelocity: CGVector = CGVector()
+	
 
 
-	override init?(frame: NSRect, isPreview: Bool) {
-		super.init(frame: frame, isPreview: isPreview)
+	// MARK: - INITIALIZER FUNCS
+	func getBallPosition() -> CGPoint {
+		return CGPoint(x: frame.width / 2, y: frame.height / 2)
 	}
 	
-	required init?(coder: NSCoder) {
-		super.init(coder: coder)
-	}
-	
-	func logValues() {
-		os_log("############################################")
-		os_log("############################################")
-		os_log("############################################")
-		os_log("Ball Velocity: %{public}@", "\(ballVelocity)")
-	}
-	
-	override func viewDidMoveToWindow() {
-		wantsLayer = true
-		animationTimeInterval = settings.animationFPS
-		configureViews()
-		layoutViews()
-		animateOneFrame()
-		ballPosition = CGPoint(x: frame.width / 2, y: frame.height / 2)
-		ballVelocity = initialVelocity()
-		logValues()
+	func getBallVelocity() -> CGVector {
+		return initialVelocity()
 	}
 	
 	func configureViews() {
@@ -51,7 +36,7 @@ class myScreenSaverView: ScreenSaverView {
 		wrapperView.orientation = .vertical
 		wrapperView.distribution = .equalCentering
 		wrapperView.addArrangedSubview(timeView)
-//		wrapperView.addArrangedSubview(textView)
+		// wrapperView.addArrangedSubview(textView)
 		addSubview(wrapperView)
 	}
 	
@@ -62,6 +47,24 @@ class myScreenSaverView: ScreenSaverView {
 		wrapperView.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
 		timeView.resizeFont(for: bounds.size)
 	}
+	
+	// MARK: - INITIALIZATION
+	override init?(frame: NSRect, isPreview: Bool) {
+		super.init(frame: frame, isPreview: isPreview)
+		self.ballPosition = getBallPosition()
+		self.ballVelocity = getBallVelocity()
+		animationTimeInterval = settings.animationFPS
+		configureViews()
+		layoutViews()
+	}
+	
+	@available(*, unavailable)
+	required init?(coder: NSCoder) {
+		super.init(coder: coder)
+		fatalError("init(coder:) has not been implemented")
+	}
+	
+	// MARK: - LIFECYCLE
 	
 	override func draw(_ rect: NSRect) {
 		settings.backgroundColor.setFill()
@@ -97,9 +100,9 @@ class myScreenSaverView: ScreenSaverView {
 		if ballPosition.x > bounds.width - paddleSize.width / 2 {
 			paddlePosition = bounds.width - paddleSize.width / 2
 		}
-		
-		let flasher = timeView.timeFlash()
-		timeView.update(flasher)
+
+		timeView.update(timeView.timeFlash())
+		super.animateOneFrame()
 		setNeedsDisplay(bounds)
 	}
 	
