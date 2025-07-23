@@ -19,17 +19,18 @@ class myScreenSaverView: ScreenSaverView {
 	let textView = TextView()
 	var ballPosition: CGPoint = CGPoint()
 	var ballVelocity: CGVector = CGVector()
+	var initialized = false
 	
 
 
 	// MARK: - INITIALIZER FUNCS
-	func getBallPosition() -> CGPoint {
-		return CGPoint(x: frame.width / 2, y: frame.height / 2)
-	}
+//	func getBallPosition() -> CGPoint {
+//		return CGPoint(x: frame.width / 2, y: frame.height / 2)
+//	}
 	
-	func getBallVelocity() -> CGVector {
-		return initialVelocity()
-	}
+//	func getBallVelocity() -> CGVector {
+//		return initialVelocity()
+//	}
 	
 	func configureViews() {
 		wrapperView.alignment = .centerX
@@ -51,8 +52,6 @@ class myScreenSaverView: ScreenSaverView {
 	// MARK: - INITIALIZATION
 	override init?(frame: NSRect, isPreview: Bool) {
 		super.init(frame: frame, isPreview: isPreview)
-		self.ballPosition = getBallPosition()
-		self.ballVelocity = getBallVelocity()
 		animationTimeInterval = settings.animationFPS
 		configureViews()
 		layoutViews()
@@ -61,12 +60,18 @@ class myScreenSaverView: ScreenSaverView {
 	@available(*, unavailable)
 	required init?(coder: NSCoder) {
 		super.init(coder: coder)
-		fatalError("init(coder:) has not been implemented")
+		animationTimeInterval = settings.animationFPS
+		configureViews()
+		layoutViews()
 	}
 	
 	// MARK: - LIFECYCLE
 	
+	
 	override func draw(_ rect: NSRect) {
+		if(!self.initialized){
+			initBallPaddle()
+		}
 		settings.backgroundColor.setFill()
 		bounds.fill()
 		let color = colorSequence.getColor()
@@ -78,7 +83,7 @@ class myScreenSaverView: ScreenSaverView {
 		
 	}
 	
-	override func animateOneFrame() {
+	private func drawBallPaddle() {
 		let oobAxis = ballIsOOB(bounds)
 		if oobAxis.xAxis {
 			ballVelocity.dx *= -1
@@ -100,8 +105,17 @@ class myScreenSaverView: ScreenSaverView {
 		if ballPosition.x > bounds.width - paddleSize.width / 2 {
 			paddlePosition = bounds.width - paddleSize.width / 2
 		}
-
+		
 		timeView.update(timeView.timeFlash())
+	}
+	
+	private func initBallPaddle() {
+		self.initialized = true
+		ballPosition = CGPoint(x: frame.width / 2, y: frame.height / 2)
+		ballVelocity = initialVelocity()
+	}
+
+	override func animateOneFrame() {
 		super.animateOneFrame()
 		setNeedsDisplay(bounds)
 	}
