@@ -6,26 +6,43 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		92AC6E9E2E37155A00631D62 /* ComplementaryExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92AC6E782E37155A00631D62 /* ComplementaryExtension.swift */; };
+		92AC6E9F2E37155A00631D62 /* SaturationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92AC6E792E37155A00631D62 /* SaturationExtension.swift */; };
+		92AC6EA02E37155A00631D62 /* ColorSequence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92AC6E962E37155A00631D62 /* ColorSequence.swift */; };
+		92AC6EA12E37155A00631D62 /* myScreenSaverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92AC6E982E37155A00631D62 /* myScreenSaverView.swift */; };
+		92AC6EA22E37155A00631D62 /* PongSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92AC6E992E37155A00631D62 /* PongSettings.swift */; };
+		92AC6EA32E37155A00631D62 /* ScreenSaverSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92AC6E9A2E37155A00631D62 /* ScreenSaverSettings.swift */; };
+		92AC6EA42E37155A00631D62 /* textView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92AC6E9B2E37155A00631D62 /* textView.swift */; };
+		92AC6EA52E37155A00631D62 /* TimeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92AC6E9C2E37155A00631D62 /* TimeView.swift */; };
+		92AC6EA62E37155A00631D62 /* CatV_6x12_9.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 92AC6E7B2E37155A00631D62 /* CatV_6x12_9.ttf */; };
+		92AC6EC02E37155A00631D62 /* ComplementaryExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92AC6E782E37155A00631D62 /* ComplementaryExtension.swift */; };
+		92AC6EC12E37155A00631D62 /* SaturationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92AC6E792E37155A00631D62 /* SaturationExtension.swift */; };
+		92AC6EC22E37155A00631D62 /* ColorSequence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92AC6E962E37155A00631D62 /* ColorSequence.swift */; };
+		92AC6EC32E37155A00631D62 /* myScreenSaverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92AC6E982E37155A00631D62 /* myScreenSaverView.swift */; };
+		92AC6EC42E37155A00631D62 /* PongSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92AC6E992E37155A00631D62 /* PongSettings.swift */; };
+		92AC6EC52E37155A00631D62 /* ScreenSaverSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92AC6E9A2E37155A00631D62 /* ScreenSaverSettings.swift */; };
+		92AC6EC62E37155A00631D62 /* textView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92AC6E9B2E37155A00631D62 /* textView.swift */; };
+		92AC6EC72E37155A00631D62 /* TimeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92AC6E9C2E37155A00631D62 /* TimeView.swift */; };
+		92AC6EC82E37155A00631D62 /* CatV_6x12_9.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 92AC6E7B2E37155A00631D62 /* CatV_6x12_9.ttf */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		92258F9F2E1486D2003F49D2 /* myScreenSaver.saver */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = myScreenSaver.saver; sourceTree = BUILT_PRODUCTS_DIR; };
 		92258FF82E149024003F49D2 /* myScreenSaverPreview.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = myScreenSaverPreview.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		92AC6E782E37155A00631D62 /* ComplementaryExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplementaryExtension.swift; sourceTree = "<group>"; };
+		92AC6E792E37155A00631D62 /* SaturationExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaturationExtension.swift; sourceTree = "<group>"; };
+		92AC6E7B2E37155A00631D62 /* CatV_6x12_9.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = CatV_6x12_9.ttf; sourceTree = "<group>"; };
+		92AC6E962E37155A00631D62 /* ColorSequence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorSequence.swift; sourceTree = "<group>"; };
+		92AC6E972E37155A00631D62 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		92AC6E982E37155A00631D62 /* myScreenSaverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = myScreenSaverView.swift; sourceTree = "<group>"; };
+		92AC6E992E37155A00631D62 /* PongSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PongSettings.swift; sourceTree = "<group>"; };
+		92AC6E9A2E37155A00631D62 /* ScreenSaverSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenSaverSettings.swift; sourceTree = "<group>"; };
+		92AC6E9B2E37155A00631D62 /* textView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = textView.swift; sourceTree = "<group>"; };
+		92AC6E9C2E37155A00631D62 /* TimeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		9221D01D2E1CC50C00D6F8A7 /* Exceptions for "myScreenSaver" folder in "myScreenSaver" target */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				Info.plist,
-			);
-			target = 92258F9E2E1486D2003F49D2 /* myScreenSaver */;
-		};
-		9221D01E2E1CC50C00D6F8A7 /* Exceptions for "myScreenSaver" folder in "myScreenSaverPreview" target */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				Info.plist,
-			);
-			target = 92258FF72E149024003F49D2 /* myScreenSaverPreview */;
-		};
 		9221D0272E1CC51600D6F8A7 /* Exceptions for "myScreenSaverPreview" folder in "myScreenSaverPreview" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
@@ -37,15 +54,6 @@
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		9221CFFE2E1CC50C00D6F8A7 /* myScreenSaver */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-				9221D01D2E1CC50C00D6F8A7 /* Exceptions for "myScreenSaver" folder in "myScreenSaver" target */,
-				9221D01E2E1CC50C00D6F8A7 /* Exceptions for "myScreenSaver" folder in "myScreenSaverPreview" target */,
-			);
-			path = myScreenSaver;
-			sourceTree = "<group>";
-		};
 		9221D0242E1CC51600D6F8A7 /* myScreenSaverPreview */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
@@ -77,7 +85,7 @@
 		92258F952E1486D2003F49D2 = {
 			isa = PBXGroup;
 			children = (
-				9221CFFE2E1CC50C00D6F8A7 /* myScreenSaver */,
+				92AC6E9D2E37155A00631D62 /* myScreenSaver */,
 				9221D0242E1CC51600D6F8A7 /* myScreenSaverPreview */,
 				92258FA02E1486D2003F49D2 /* Products */,
 			);
@@ -90,6 +98,47 @@
 				92258FF82E149024003F49D2 /* myScreenSaverPreview.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		92AC6E7A2E37155A00631D62 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				92AC6E782E37155A00631D62 /* ComplementaryExtension.swift */,
+				92AC6E792E37155A00631D62 /* SaturationExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		92AC6E942E37155A00631D62 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				92AC6E7B2E37155A00631D62 /* CatV_6x12_9.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		92AC6E952E37155A00631D62 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				92AC6E942E37155A00631D62 /* Fonts */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		92AC6E9D2E37155A00631D62 /* myScreenSaver */ = {
+			isa = PBXGroup;
+			children = (
+				92AC6E7A2E37155A00631D62 /* Extensions */,
+				92AC6E952E37155A00631D62 /* Resources */,
+				92AC6E982E37155A00631D62 /* myScreenSaverView.swift */,
+				92AC6E962E37155A00631D62 /* ColorSequence.swift */,
+				92AC6E992E37155A00631D62 /* PongSettings.swift */,
+				92AC6E9A2E37155A00631D62 /* ScreenSaverSettings.swift */,
+				92AC6E9B2E37155A00631D62 /* textView.swift */,
+				92AC6E9C2E37155A00631D62 /* TimeView.swift */,
+				92AC6E972E37155A00631D62 /* Info.plist */,
+			);
+			path = myScreenSaver;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -118,9 +167,6 @@
 			);
 			dependencies = (
 			);
-			fileSystemSynchronizedGroups = (
-				9221CFFE2E1CC50C00D6F8A7 /* myScreenSaver */,
-			);
 			name = myScreenSaver;
 			packageProductDependencies = (
 			);
@@ -139,9 +185,6 @@
 			buildRules = (
 			);
 			dependencies = (
-			);
-			fileSystemSynchronizedGroups = (
-				9221CFFE2E1CC50C00D6F8A7 /* myScreenSaver */,
 			);
 			name = myScreenSaverPreview;
 			packageProductDependencies = (
@@ -194,6 +237,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				92AC6EC82E37155A00631D62 /* CatV_6x12_9.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -201,6 +245,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				92AC6EA62E37155A00631D62 /* CatV_6x12_9.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -211,6 +256,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				92AC6EC02E37155A00631D62 /* ComplementaryExtension.swift in Sources */,
+				92AC6EC12E37155A00631D62 /* SaturationExtension.swift in Sources */,
+				92AC6EC22E37155A00631D62 /* ColorSequence.swift in Sources */,
+				92AC6EC32E37155A00631D62 /* myScreenSaverView.swift in Sources */,
+				92AC6EC42E37155A00631D62 /* PongSettings.swift in Sources */,
+				92AC6EC52E37155A00631D62 /* ScreenSaverSettings.swift in Sources */,
+				92AC6EC62E37155A00631D62 /* textView.swift in Sources */,
+				92AC6EC72E37155A00631D62 /* TimeView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -218,6 +271,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				92AC6E9E2E37155A00631D62 /* ComplementaryExtension.swift in Sources */,
+				92AC6E9F2E37155A00631D62 /* SaturationExtension.swift in Sources */,
+				92AC6EA02E37155A00631D62 /* ColorSequence.swift in Sources */,
+				92AC6EA12E37155A00631D62 /* myScreenSaverView.swift in Sources */,
+				92AC6EA22E37155A00631D62 /* PongSettings.swift in Sources */,
+				92AC6EA32E37155A00631D62 /* ScreenSaverSettings.swift in Sources */,
+				92AC6EA42E37155A00631D62 /* textView.swift in Sources */,
+				92AC6EA52E37155A00631D62 /* TimeView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

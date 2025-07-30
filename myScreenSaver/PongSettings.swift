@@ -10,19 +10,24 @@ import Cocoa
 @MainActor var ballPosition: CGPoint = .zero
 @MainActor var ballVelocity: CGVector = .zero
 @MainActor var paddlePosition: CGFloat = 0
-let inititalMagnitude: CGFloat = 4
-let ballRadius: CGFloat = 20
+
+let inititalMagnitude: CGFloat = 8
+let ballRadius: CGFloat = 10
 let paddleBottomOffset: CGFloat = 100
 let paddleSize = NSSize(width: 120, height: 20)
 
 @MainActor func drawBall(_ color: NSColor) {
-	let ballRect = NSRect(x: ballPosition.x - ballRadius,
-						  y: ballPosition.y - ballRadius,
+	let ballRect = NSRect(x: ballPosition.x - (ballRadius / 2),
+						  y: ballPosition.y - (ballRadius / 2),
 						  width: ballRadius * 2,
 						  height: ballRadius * 2)
-	let ball = NSBezierPath(roundedRect: ballRect,
-							xRadius: ballRadius,
-							yRadius: ballRadius)
+	let ball = NSBezierPath(rect: ballRect )
+//							xRadius: ballRadius,
+//							yRadius: ballRadius)
+	
+//	let ball = NSBezierPath(roundedRect: ballRect,
+//							xRadius: ballRadius,
+//							yRadius: ballRadius)
 	color.setFill()
 	ball.fill()
 }
@@ -33,13 +38,12 @@ let paddleSize = NSSize(width: 120, height: 20)
 							width: paddleSize.width,
 							height: paddleSize.height)
 	let paddle = NSBezierPath(rect: paddleRect )
-	
 	color.setFill()
 	paddle.fill()
 }
 
 func initialVelocity() -> CGVector {
-	let xVelocity = CGFloat.random(in: 2.5...3.0)
+	let xVelocity = CGFloat.random(in: 2.5...3.5)
 	let xSign: CGFloat = Bool.random() ? 1 : -1
 	let yVelocity = sqrt(pow(inititalMagnitude, 2) - pow(xVelocity, 2))
 	let ySign: CGFloat = Bool.random() ? 1 : -1

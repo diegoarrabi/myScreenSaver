@@ -15,7 +15,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 	let displaySize = NSScreen.main?.frame.size
 	let previewSizeRatio = CGFloat(0.6)
 	let previewOrigin = CGPoint(x: 0, y: 0)
-	var textview = NSTextField(string: "Hello World!")
 	
 	func applicationShouldTerminateAfterLastWindowClosed(_ sender: NSApplication) -> Bool {
 		return true
@@ -58,16 +57,3 @@ func SizeMultiplier(Size size: CGSize, Multiplier multiplier: CGFloat) -> CGSize
 	newSize.height = size.height * multiplier
 	return newSize
 }
-
-func listInstalledFonts() {
-	let fontFamilies = NSFontManager.shared.availableFontFamilies.sorted()
-	for family in fontFamilies {
-		print(family)
-		let familyFonts = NSFontManager.shared.availableMembers(ofFontFamily: family)
-		if let fonts = familyFonts {
-			for font in fonts {
-				print("\t\(font)")
-			}
-		}
-	}
-	}

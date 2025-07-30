@@ -7,37 +7,36 @@
 
 import Cocoa
 import ScreenSaver
+import OSLog
 
 
 class myScreenSaverView: ScreenSaverView {
 	
 	// MARK: - GLOBALS
+	let displaySize = NSScreen.main?.frame.size
 	let settings = ScreenSaverSettings.shared
 	let wrapperView = NSStackView()
+	let newVARIABLE: String = "newVARIABLE"
+	let newINTEGER: Float = 00112233445566778899.01
 	let colorSequence = ColorSequence()
 	let timeView = TimeView()
 	let textView = TextView()
-	var ballPosition: CGPoint = CGPoint()
-	var ballVelocity: CGVector = CGVector()
-	var initialized = false
 	
-
-
+	
 	// MARK: - INITIALIZER FUNCS
-//	func getBallPosition() -> CGPoint {
-//		return CGPoint(x: frame.width / 2, y: frame.height / 2)
-//	}
-	
-//	func getBallVelocity() -> CGVector {
-//		return initialVelocity()
-//	}
-	
+	private func setup() {
+		animationTimeInterval = settings.animationFPS
+		configureViews()
+		layoutViews()
+		ballPosition = CGPoint(x: displaySize!.width / 2, y: displaySize!.height / 2)
+		ballVelocity = initialVelocity()
+	}
+		
 	func configureViews() {
 		wrapperView.alignment = .centerX
 		wrapperView.orientation = .vertical
 		wrapperView.distribution = .equalCentering
 		wrapperView.addArrangedSubview(timeView)
-		// wrapperView.addArrangedSubview(textView)
 		addSubview(wrapperView)
 	}
 	
@@ -49,41 +48,45 @@ class myScreenSaverView: ScreenSaverView {
 		timeView.resizeFont(for: bounds.size)
 	}
 	
+	
 	// MARK: - INITIALIZATION
 	override init?(frame: NSRect, isPreview: Bool) {
 		super.init(frame: frame, isPreview: isPreview)
-		animationTimeInterval = settings.animationFPS
-		configureViews()
-		layoutViews()
+		setup()
 	}
 	
-	@available(*, unavailable)
 	required init?(coder: NSCoder) {
 		super.init(coder: coder)
-		animationTimeInterval = settings.animationFPS
-		configureViews()
-		layoutViews()
+		setup()
 	}
 	
+	class override func performGammaFade() -> Bool {
+		return true
+	}
+	
+	func logValues() {
+		let logString = String(repeating: "#", count: 50)
+		os_log("%{public}@", logString)
+		os_log("Ball Velocity: %{public}@", "\(ballVelocity)")
+	}
+	
+	
 	// MARK: - LIFECYCLE
-	
-	
 	override func draw(_ rect: NSRect) {
-		if(!self.initialized){
-			initBallPaddle()
-		}
 		settings.backgroundColor.setFill()
 		bounds.fill()
+		
 		let color = colorSequence.getColor()
 		let desaturatedColor = color.withSaturation(0.5) ?? color
 		let complementaryColor = desaturatedColor.withComplementary()
 		drawBall(desaturatedColor)
 		drawPaddle(desaturatedColor)
 		timeView.updateColor(complementaryColor)
-		
 	}
 	
-	private func drawBallPaddle() {
+	override func animateOneFrame() {
+		timeView.update(timeView.timeFlash())
+		
 		let oobAxis = ballIsOOB(bounds)
 		if oobAxis.xAxis {
 			ballVelocity.dx *= -1
@@ -106,21 +109,9 @@ class myScreenSaverView: ScreenSaverView {
 			paddlePosition = bounds.width - paddleSize.width / 2
 		}
 		
-		timeView.update(timeView.timeFlash())
-	}
-	
-	private func initBallPaddle() {
-		self.initialized = true
-		ballPosition = CGPoint(x: frame.width / 2, y: frame.height / 2)
-		ballVelocity = initialVelocity()
-	}
-
-	override func animateOneFrame() {
-		super.animateOneFrame()
 		setNeedsDisplay(bounds)
 	}
 	
-	class override func performGammaFade() -> Bool {
-		return true
-	}
+	
 }
+
