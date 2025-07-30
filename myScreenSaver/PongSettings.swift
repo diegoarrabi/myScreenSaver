@@ -69,3 +69,11 @@ func initialVelocity() -> CGVector {
 	ballPosition.y - ballRadius <= yBounds.upper
 }
 
+//0xProto
+//adwaita
+//blex
+//cask
+//feature
+//jet
+//mdio
+//pita

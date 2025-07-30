@@ -1,117 +1,162 @@
+////
+////  screensaverView.swift
+////  myScreenSaver
+////
+////  Created by Diego Ibarra on 7/1/25.
+////
 //
-//  screensaverView.swift
-//  myScreenSaver
+//import Cocoa
+//import ScreenSaver
+//import OSLog
 //
-//  Created by Diego Ibarra on 7/1/25.
+//
+//class myScreenSaverView: ScreenSaverView {
+//	
+//	// MARK: - GLOBALS
+//	let settings = ScreenSaverSettings.shared
+//	var displayRect: NSRect = .zero
+//	var displaySize: CGSize = .zero
+//	let wrapperView = NSStackView()
+//	let pongObject = PongObject()
+//	let timeView = TimeView()
+//	let textView = TextView()
+//	let colorSequence = ColorSequence()
+//	var startedAnimating = false
+//	var drawCounter = 0
+//	
+//	
+//	// MARK: - INITIALIZER FUNCS
+//	private func setup() {
+//		animationTimeInterval = self.settings.animationFPS
+//		self.displaySize = displayRect.size
+//		pongObject.setup(with: displayRect)
+//		configureViews()
+//		timeView.resizeFont(for: displaySize)
+//	}
+//		
+//	func configureViews() {
+//		wrapperView.alignment = .centerX
+//		wrapperView.orientation = .vertical
+//		wrapperView.distribution = .equalCentering
+//		wrapperView.addArrangedSubview(timeView)
+//		addSubview(wrapperView)
+//		wrapperView.translatesAutoresizingMaskIntoConstraints = false
+//		wrapperView.leadingAnchor.constraint(equalTo: leadingAnchor).isActive = true
+//		wrapperView.widthAnchor.constraint(equalTo: widthAnchor).isActive = true
+//		wrapperView.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
+//	}
+//	
+//	// MARK: - INITIALIZATION
+//	override init?(frame: NSRect, isPreview: Bool) {
+//		self.displayRect = frame
+//		super.init(frame: frame, isPreview: isPreview)
+//		MyLogger().log(message: "Ran From Override init")
+//	}
+//	
+//	required init?(coder: NSCoder) {
+//		self.displayRect = .zero
+//		super.init(coder: coder)
+//	}
+//	
+//	override func viewDidMoveToWindow() {
+//		super.viewDidMoveToWindow()
+//		self.displayRect = self.bounds
+//		setup()
+//	}
+//	// MARK: - LIFECYCLE
+//	override func draw(_ rect: NSRect) {
+//		if drawCounter <= 10 {
+//			settings.backgroundColor.setFill()
+//			self.bounds.fill()
+//		}
+////		settings.backgroundColor.setFill()
+////		self.bounds.fill()
+//		
+//		let color = colorSequence.getColor()
+//		let desaturatedColor = color.withSaturation(0.5) ?? color
+//		let complementaryColor = desaturatedColor.withComplementary()
+//
+//		timeView.update(with: complementaryColor)
+//		pongObject.drawObjects(with: desaturatedColor)
+//	}
+//	
+//	override func animateOneFrame() {
+//		pongObject.pongCycle()
+//		setNeedsDisplay(self.bounds)
+//	}
+//}
 //
 
 import Cocoa
 import ScreenSaver
 import OSLog
 
-
 class myScreenSaverView: ScreenSaverView {
-	
-	// MARK: - GLOBALS
-	let displaySize = NSScreen.main?.frame.size
+	// MARK: - Properties
 	let settings = ScreenSaverSettings.shared
+	var displayRect: NSRect
+	var displaySize: CGSize { displayRect.size }
 	let wrapperView = NSStackView()
-	let newVARIABLE: String = "newVARIABLE"
-	let newINTEGER: Float = 00112233445566778899.01
-	let colorSequence = ColorSequence()
+	let pongObject = PongObject()
 	let timeView = TimeView()
 	let textView = TextView()
+	let colorSequence = ColorSequence()
+	var startedAnimating = false
+	var drawCounter = 0
 	
+	// MARK: - Initializers
+	override init?(frame: NSRect, isPreview: Bool) {
+		self.displayRect = frame
+		super.init(frame: frame, isPreview: isPreview)
+		configureViews()
+		MyLogger().log(message: "Ran From Override init")
+	}
 	
-	// MARK: - INITIALIZER FUNCS
+	required init?(coder: NSCoder) {
+		self.displayRect = .zero
+		super.init(coder: coder)
+		configureViews()
+	}
+	
+	// MARK: - Setup
 	private func setup() {
 		animationTimeInterval = settings.animationFPS
-		configureViews()
-		layoutViews()
-		ballPosition = CGPoint(x: displaySize!.width / 2, y: displaySize!.height / 2)
-		ballVelocity = initialVelocity()
+		pongObject.setup(with: displayRect)
+		timeView.resizeFont(for: displaySize)
 	}
-		
-	func configureViews() {
+	
+	private func configureViews() {
 		wrapperView.alignment = .centerX
 		wrapperView.orientation = .vertical
 		wrapperView.distribution = .equalCentering
 		wrapperView.addArrangedSubview(timeView)
 		addSubview(wrapperView)
-	}
-	
-	func layoutViews() {
 		wrapperView.translatesAutoresizingMaskIntoConstraints = false
 		wrapperView.leadingAnchor.constraint(equalTo: leadingAnchor).isActive = true
 		wrapperView.widthAnchor.constraint(equalTo: widthAnchor).isActive = true
 		wrapperView.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
-		timeView.resizeFont(for: bounds.size)
 	}
 	
-	
-	// MARK: - INITIALIZATION
-	override init?(frame: NSRect, isPreview: Bool) {
-		super.init(frame: frame, isPreview: isPreview)
+	// MARK: - Lifecycle
+	override func viewDidMoveToWindow() {
+		super.viewDidMoveToWindow()
+		displayRect = bounds
 		setup()
 	}
 	
-	required init?(coder: NSCoder) {
-		super.init(coder: coder)
-		setup()
-	}
-	
-	class override func performGammaFade() -> Bool {
-		return true
-	}
-	
-	func logValues() {
-		let logString = String(repeating: "#", count: 50)
-		os_log("%{public}@", logString)
-		os_log("Ball Velocity: %{public}@", "\(ballVelocity)")
-	}
-	
-	
-	// MARK: - LIFECYCLE
 	override func draw(_ rect: NSRect) {
-		settings.backgroundColor.setFill()
-		bounds.fill()
-		
-		let color = colorSequence.getColor()
-		let desaturatedColor = color.withSaturation(0.5) ?? color
+		if drawCounter <= 2 {
+			settings.backgroundColor.setFill()
+			NSBezierPath(rect: bounds).fill()
+		}
+		let desaturatedColor = colorSequence.getColor().withSaturation(0.5)
 		let complementaryColor = desaturatedColor.withComplementary()
-		drawBall(desaturatedColor)
-		drawPaddle(desaturatedColor)
-		timeView.updateColor(complementaryColor)
+		timeView.update(with: complementaryColor)
+		pongObject.drawObjects(with: desaturatedColor)
 	}
 	
 	override func animateOneFrame() {
-		timeView.update(timeView.timeFlash())
-		
-		let oobAxis = ballIsOOB(bounds)
-		if oobAxis.xAxis {
-			ballVelocity.dx *= -1
-		}
-		if oobAxis.yAxis {
-			ballVelocity.dy *= -1
-		}
-		let paddleContact = ballHitPaddle()
-		if paddleContact {
-			ballVelocity.dy *= -1
-		}
-		ballPosition.x += ballVelocity.dx
-		ballPosition.y += ballVelocity.dy
-		paddlePosition = ballPosition.x
-		
-		if ballPosition.x < paddleSize.width / 2 {
-			paddlePosition = paddleSize.width / 2
-		}
-		if ballPosition.x > bounds.width - paddleSize.width / 2 {
-			paddlePosition = bounds.width - paddleSize.width / 2
-		}
-		
+		pongObject.pongCycle()
 		setNeedsDisplay(bounds)
 	}
-	
-	
 }
-

@@ -11,7 +11,6 @@ class TextView: NSTextField {
 	
 	let settings = ScreenSaverSettings.shared
 	
-	
 	override init(frame frameRect: NSRect) {
 		super.init(frame: frameRect)
 		setup()
