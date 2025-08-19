@@ -6,26 +6,46 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		927EF8BD2E54691A00070600 /* CGSizeExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927EF8AE2E54691A00070600 /* CGSizeExtensions.swift */; };
+		927EF8BE2E54691A00070600 /* MyLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927EF8AF2E54691A00070600 /* MyLog.swift */; };
+		927EF8BF2E54691A00070600 /* NSColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927EF8B02E54691A00070600 /* NSColorExtensions.swift */; };
+		927EF8C02E54691A00070600 /* ColorSequence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927EF8B52E54691A00070600 /* ColorSequence.swift */; };
+		927EF8C12E54691A00070600 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927EF8B72E54691A00070600 /* MainView.swift */; };
+		927EF8C22E54691A00070600 /* PongObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927EF8B82E54691A00070600 /* PongObject.swift */; };
+		927EF8C32E54691A00070600 /* SettingsClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927EF8B92E54691A00070600 /* SettingsClass.swift */; };
+		927EF8C42E54691A00070600 /* TimeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927EF8BA2E54691A00070600 /* TimeView.swift */; };
+		927EF8C52E54691A00070600 /* ztextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927EF8BB2E54691A00070600 /* ztextView.swift */; };
+		927EF8C62E54691A00070600 /* CatV_6x12.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 927EF8B22E54691A00070600 /* CatV_6x12.ttf */; };
+		927EF8C82E54691A00070600 /* CGSizeExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927EF8AE2E54691A00070600 /* CGSizeExtensions.swift */; };
+		927EF8C92E54691A00070600 /* MyLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927EF8AF2E54691A00070600 /* MyLog.swift */; };
+		927EF8CA2E54691A00070600 /* NSColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927EF8B02E54691A00070600 /* NSColorExtensions.swift */; };
+		927EF8CB2E54691A00070600 /* ColorSequence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927EF8B52E54691A00070600 /* ColorSequence.swift */; };
+		927EF8CC2E54691A00070600 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927EF8B72E54691A00070600 /* MainView.swift */; };
+		927EF8CD2E54691A00070600 /* PongObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927EF8B82E54691A00070600 /* PongObject.swift */; };
+		927EF8CE2E54691A00070600 /* SettingsClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927EF8B92E54691A00070600 /* SettingsClass.swift */; };
+		927EF8CF2E54691A00070600 /* TimeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927EF8BA2E54691A00070600 /* TimeView.swift */; };
+		927EF8D02E54691A00070600 /* ztextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927EF8BB2E54691A00070600 /* ztextView.swift */; };
+		927EF8D12E54691A00070600 /* CatV_6x12.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 927EF8B22E54691A00070600 /* CatV_6x12.ttf */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		92258F9F2E1486D2003F49D2 /* myScreenSaver.saver */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = myScreenSaver.saver; sourceTree = BUILT_PRODUCTS_DIR; };
 		92258FF82E149024003F49D2 /* myScreenSaverPreview.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = myScreenSaverPreview.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		927EF8AE2E54691A00070600 /* CGSizeExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGSizeExtensions.swift; sourceTree = "<group>"; };
+		927EF8AF2E54691A00070600 /* MyLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyLog.swift; sourceTree = "<group>"; };
+		927EF8B02E54691A00070600 /* NSColorExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSColorExtensions.swift; sourceTree = "<group>"; };
+		927EF8B22E54691A00070600 /* CatV_6x12.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = CatV_6x12.ttf; sourceTree = "<group>"; };
+		927EF8B52E54691A00070600 /* ColorSequence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorSequence.swift; sourceTree = "<group>"; };
+		927EF8B62E54691A00070600 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		927EF8B72E54691A00070600 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		927EF8B82E54691A00070600 /* PongObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PongObject.swift; sourceTree = "<group>"; };
+		927EF8B92E54691A00070600 /* SettingsClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsClass.swift; sourceTree = "<group>"; };
+		927EF8BA2E54691A00070600 /* TimeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeView.swift; sourceTree = "<group>"; };
+		927EF8BB2E54691A00070600 /* ztextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ztextView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		9221D01D2E1CC50C00D6F8A7 /* Exceptions for "myScreenSaver" folder in "myScreenSaver" target */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				Info.plist,
-			);
-			target = 92258F9E2E1486D2003F49D2 /* myScreenSaver */;
-		};
-		9221D01E2E1CC50C00D6F8A7 /* Exceptions for "myScreenSaver" folder in "myScreenSaverPreview" target */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				Info.plist,
-			);
-			target = 92258FF72E149024003F49D2 /* myScreenSaverPreview */;
-		};
 		9221D0272E1CC51600D6F8A7 /* Exceptions for "myScreenSaverPreview" folder in "myScreenSaverPreview" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
@@ -37,15 +57,6 @@
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		9221CFFE2E1CC50C00D6F8A7 /* myScreenSaver */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-				9221D01D2E1CC50C00D6F8A7 /* Exceptions for "myScreenSaver" folder in "myScreenSaver" target */,
-				9221D01E2E1CC50C00D6F8A7 /* Exceptions for "myScreenSaver" folder in "myScreenSaverPreview" target */,
-			);
-			path = myScreenSaver;
-			sourceTree = "<group>";
-		};
 		9221D0242E1CC51600D6F8A7 /* myScreenSaverPreview */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
@@ -78,7 +89,7 @@
 			isa = PBXGroup;
 			children = (
 				92258FA02E1486D2003F49D2 /* Products */,
-				9221CFFE2E1CC50C00D6F8A7 /* myScreenSaver */,
+				927EF8BC2E54691A00070600 /* myScreenSaver */,
 				9221D0242E1CC51600D6F8A7 /* myScreenSaverPreview */,
 			);
 			sourceTree = "<group>";
@@ -90,6 +101,48 @@
 				92258FF82E149024003F49D2 /* myScreenSaverPreview.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		927EF8B12E54691A00070600 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				927EF8AE2E54691A00070600 /* CGSizeExtensions.swift */,
+				927EF8AF2E54691A00070600 /* MyLog.swift */,
+				927EF8B02E54691A00070600 /* NSColorExtensions.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		927EF8B32E54691A00070600 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				927EF8B22E54691A00070600 /* CatV_6x12.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		927EF8B42E54691A00070600 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				927EF8B32E54691A00070600 /* Fonts */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		927EF8BC2E54691A00070600 /* myScreenSaver */ = {
+			isa = PBXGroup;
+			children = (
+				927EF8B12E54691A00070600 /* Helpers */,
+				927EF8B42E54691A00070600 /* Resources */,
+				927EF8B52E54691A00070600 /* ColorSequence.swift */,
+				927EF8B62E54691A00070600 /* Info.plist */,
+				927EF8B72E54691A00070600 /* MainView.swift */,
+				927EF8B82E54691A00070600 /* PongObject.swift */,
+				927EF8B92E54691A00070600 /* SettingsClass.swift */,
+				927EF8BA2E54691A00070600 /* TimeView.swift */,
+				927EF8BB2E54691A00070600 /* ztextView.swift */,
+			);
+			path = myScreenSaver;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -118,9 +171,6 @@
 			);
 			dependencies = (
 			);
-			fileSystemSynchronizedGroups = (
-				9221CFFE2E1CC50C00D6F8A7 /* myScreenSaver */,
-			);
 			name = myScreenSaver;
 			packageProductDependencies = (
 			);
@@ -139,9 +189,6 @@
 			buildRules = (
 			);
 			dependencies = (
-			);
-			fileSystemSynchronizedGroups = (
-				9221CFFE2E1CC50C00D6F8A7 /* myScreenSaver */,
 			);
 			name = myScreenSaverPreview;
 			packageProductDependencies = (
@@ -194,6 +241,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				927EF8D12E54691A00070600 /* CatV_6x12.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -201,6 +249,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				927EF8C62E54691A00070600 /* CatV_6x12.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -211,6 +260,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				927EF8C82E54691A00070600 /* CGSizeExtensions.swift in Sources */,
+				927EF8C92E54691A00070600 /* MyLog.swift in Sources */,
+				927EF8CA2E54691A00070600 /* NSColorExtensions.swift in Sources */,
+				927EF8CB2E54691A00070600 /* ColorSequence.swift in Sources */,
+				927EF8CC2E54691A00070600 /* MainView.swift in Sources */,
+				927EF8CD2E54691A00070600 /* PongObject.swift in Sources */,
+				927EF8CE2E54691A00070600 /* SettingsClass.swift in Sources */,
+				927EF8CF2E54691A00070600 /* TimeView.swift in Sources */,
+				927EF8D02E54691A00070600 /* ztextView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -218,6 +276,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				927EF8BD2E54691A00070600 /* CGSizeExtensions.swift in Sources */,
+				927EF8BE2E54691A00070600 /* MyLog.swift in Sources */,
+				927EF8BF2E54691A00070600 /* NSColorExtensions.swift in Sources */,
+				927EF8C02E54691A00070600 /* ColorSequence.swift in Sources */,
+				927EF8C12E54691A00070600 /* MainView.swift in Sources */,
+				927EF8C22E54691A00070600 /* PongObject.swift in Sources */,
+				927EF8C32E54691A00070600 /* SettingsClass.swift in Sources */,
+				927EF8C42E54691A00070600 /* TimeView.swift in Sources */,
+				927EF8C52E54691A00070600 /* ztextView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
