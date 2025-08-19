@@ -8,7 +8,6 @@
 import OSLog
 
 struct MyLogger {
-	
 
 	func log(message: Any, description: String? = nil) {
 		let prefix: String

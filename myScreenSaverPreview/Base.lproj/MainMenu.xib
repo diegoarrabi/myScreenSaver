@@ -48,7 +48,7 @@
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="0.0" y="0.0" width="2048" height="1330"/>
             <rect key="screenRect" x="0.0" y="0.0" width="2048" height="1281"/>
-            <view key="contentView" id="EiT-Mj-1SZ" customClass="myScreenSaverView" customModule="myScreenSaverPreview" customModuleProvider="target">
+            <view key="contentView" id="EiT-Mj-1SZ" customClass="MainView" customModule="myScreenSaverPreview" customModuleProvider="target">
                 <rect key="frame" x="0.0" y="0.0" width="2048" height="1330"/>
                 <autoresizingMask key="autoresizingMask"/>
             </view>

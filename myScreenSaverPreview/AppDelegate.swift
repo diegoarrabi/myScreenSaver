@@ -12,10 +12,14 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 	
 	@IBOutlet var window: NSWindow!
 	
-	var screenSaverView: myScreenSaverView?
+	var screenSaverView: MainView?
 	let displaySize = NSScreen.main?.frame.size
 	let previewSizeRatio = CGFloat(1)
 	let previewOrigin = CGPoint(x: 0, y: 0)
+	
+	func applicationSupportsSecureRestorableState(_ app: NSApplication) -> Bool {
+		return false
+	}
 	
 	func applicationShouldTerminateAfterLastWindowClosed(_ sender: NSApplication) -> Bool {
 		return true
@@ -28,7 +32,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 		window.delegate = self
 		window.aspectRatio = desiredScreenSize
 		
-		guard let screenSaverView = window.contentView as? myScreenSaverView
+		guard let screenSaverView = window.contentView as? MainView
 		else { fatalError("[AppDelegate] - Could not cast window's contentView as a MainView") }
 		
 		let timer = Timer.scheduledTimer(
@@ -45,7 +49,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
 extension AppDelegate: NSWindowDelegate {
 	func windowDidResize(_ notification: Notification) {
-		guard let screenSaverView = window.contentView as? myScreenSaverView
+		guard let screenSaverView = window.contentView as? MainView
 		else { fatalError("could not cast window's contentView as a MainView") }
 		screenSaverView.timeView.resizeFont(for: screenSaverView.bounds.size)
 	}

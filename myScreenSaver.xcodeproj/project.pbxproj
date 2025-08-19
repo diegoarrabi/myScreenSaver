@@ -77,9 +77,9 @@
 		92258F952E1486D2003F49D2 = {
 			isa = PBXGroup;
 			children = (
+				92258FA02E1486D2003F49D2 /* Products */,
 				9221CFFE2E1CC50C00D6F8A7 /* myScreenSaver */,
 				9221D0242E1CC51600D6F8A7 /* myScreenSaverPreview */,
-				92258FA02E1486D2003F49D2 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
@@ -352,7 +352,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = myScreenSaver/Info.plist;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				INFOPLIST_KEY_NSPrincipalClass = myScreenSaver.myScreenSaverView;
+				INFOPLIST_KEY_NSPrincipalClass = myScreenSaver.MainView;
 				INSTALL_PATH = "$(HOME)/Library/Screen Savers";
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = diegoibarra.myScreenSaver;
@@ -375,7 +375,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = myScreenSaver/Info.plist;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				INFOPLIST_KEY_NSPrincipalClass = myScreenSaver.myScreenSaverView;
+				INFOPLIST_KEY_NSPrincipalClass = myScreenSaver.MainView;
 				INSTALL_PATH = "$(HOME)/Library/Screen Savers";
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = diegoibarra.myScreenSaver;
